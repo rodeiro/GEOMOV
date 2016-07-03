@@ -1,0 +1,25 @@
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="es.mastergeoinformatica.mov.rodeiro.archivos" version="1.0.0">
+  <name>VarelaP2</name>
+  <description>MOVP2</description>
+  <author href="http://phonegap.com" email="tirso.varela.rodeiro@udc.es">Tirso V. Rodeiro</author>
+  <content src="index.html"/>
+  <preference name="permissions" value="none"/>
+  <preference name="orientation" value="default"/>
+  <preference name="target-device" value="universal"/>
+  <preference name="fullscreen" value="true"/>
+  <preference name="webviewbounce" value="true"/>
+  <preference name="prerendered-icon" value="true"/>
+  <preference name="stay-in-webview" value="false"/>
+  <preference name="ios-statusbarstyle" value="black-opaque"/>
+  <preference name="detect-data-types" value="true"/>
+  <preference name="exit-on-suspend" value="false"/>
+  <preference name="show-splash-screen-spinner" value="true"/>
+  <preference name="auto-hide-splash-screen" value="true"/>
+  <preference name="disable-cursor" value="false"/>
+  <preference name="android-minSdkVersion" value="14"/>
+  <preference name="android-installLocation" value="auto"/>
+  <icon src="icon.png"/>
+  <gap:plugin name="org.apache.cordova.file"/>
+  <platform name="android">
+  </platform>
+</widget>

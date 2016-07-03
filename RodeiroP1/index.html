@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script src="lib/onsen/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+    <title>Lista de la compra</title>
+  </head>
+  <body onload="onload();">
+    <ons-tabbar>
+      <ons-tab page="lista.html" active="true">
+        <ons-icon icon="ion-ios-copy"></ons-icon
+>        <span style="font-size: 14px">Lista</span>
+      </ons-tab>
+      <ons-tab page="compras.html" >
+        <ons-icon icon="ion-ios-cart"></ons-icon>
+        <span style="font-size: 14px">Compras</span>
+      </ons-tab>
+    </ons-tabbar>
+
+<!-- -------------------------------------------------------- LISTA  ---------------------------------------------------->
+
+    <ons-template id="lista.html">
+      <ons-page id="listaPagina">
+        <ons-toolbar modifier="material">
+          <div class="center">Lista</div>
+        </ons-toolbar>
+
+
+          <ons-list  id="listacompras" modifier="material">
+          </ons-list>
+
+
+
+
+          <ons-dialog id="dialogoAnadir" cancelable>
+              <ons-toolbar inline>
+                <div class="center">
+                  Nuevo
+                </div>
+              </ons-toolbar>
+
+              <p>
+                <ons-input id="nuevoProductoInput" placeholder="Nuevo producto" float></ons-input>
+              </p>
+
+              <p>
+                <ons-button modifier="large" id="botonAnadir" >Añadir</ons-button>
+              </p>
+          </ons-dialog>
+
+
+           <ons-dialog id="dialogoModificar" cancelable>
+              <ons-toolbar inline>
+                <div class="center">
+                  Modificar
+                </div>
+              </ons-toolbar>
+
+              <p>
+                <ons-input id="modificarProductoInput" float></ons-input>
+              </p>
+
+              <p>
+                <ons-button modifier="large" id="botonModificar" >Modificar</ons-button>
+              </p>
+          </ons-dialog>
+
+
+
+          <ons-speed-dial position="bottom right" direction="up">
+            <ons-fab>
+              <ons-icon icon="ion-more" size="26px" fixed-width="false" style="vertical-align:middle;">
+              </ons-icon>
+            </ons-fab>
+            <ons-speed-dial-item id="speedNuevo">+</ons-speed-dial-item>
+            <ons-speed-dial-item id= "speedCompra"><ons-icon icon="ion-ios-cart"></ons-icon></ons-speed-dial-item>
+          </ons-speed-dial>
+      
+      </ons-page>
+    </ons-template>
+
+<!-- -------------------------------------------------------- COMPRAS  ---------------------------------------------------->
+
+    <ons-template id="compras.html">
+      <ons-page id="comprasPagina">
+      <ons-toolbar modifier="material">
+        <div class="center">Compras</div>
+      </ons-toolbar>
+
+    
+      <ons-list id="historial" modifier="material">
+      </ons-list>
+
+      <ons-modal var="modal" id= "modal">
+            <div id="enumModal"></div><br><br>
+        <ons-icon id="cerrarModal" icon="ion-close-circled" spin="false"></ons-icon>
+      </ons-modal>
+
+     
+      </ons-page>
+    </ons-template>
+
+
+
+</div>
+
+  </body>
+</html>
+

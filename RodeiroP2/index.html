@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+    <title>Files</title>
+     <script src="lib/onsen/js/onsenui.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+  </head>
+      <body onload="onload();">
+          <ons-toolbar modifier="material">
+            <div class="center">Ficheros</div>
+          </ons-toolbar><br><br><br>
+        <div align="center">
+            <select id="selector">
+              <option value="cacheDirectory">cacheDirectory</option>
+              <option value="dataDirectory">dataDirectory</option>
+              <option value="externalRootDirectory">externalRootDirectory</option>
+              <option value="externalCacheDirectory">externalCacheDirectory</option>
+              <option value="externalDataDirectory">externalDataDirectory</option>
+            </select>
+        </div>
+    <br>
+
+     <ons-list id="historialYFiltro" modifier="material">
+              <ons-list-item>
+                  <div class="list__item__left"><ons-input id="nombreArchivo" placeholder="Nombre del archivo" float></ons-input></div>
+              </ons-list-item>
+              
+            <ons-list-item modifier="material">
+              <div class="list__item__left">
+                <ons-button  id="botonCrear" modifier="material">Crear/Abrir</ons-button>
+              </div>
+              <div class="list__item__right">
+                <ons-button  id="botonBorrar" modifier="material">Borrar</ons-button>
+              </div>
+           </ons-list-item>
+
+           <ons-list-item modifier="material">
+              <div class="list__item__right">
+                <ons-button  id="botonLeer" modifier="material">Leer</ons-button>
+              </div>
+              <div class="list__item__left">
+                <ons-button  id="botonEscribir" modifier="material">Escribir</ons-button>
+              </div>
+           </ons-list-item>
+
+           <ons-list-item>
+                  <div class="list__item__left"><ons-input id="contenidoArchivo" placeholder="Contenido del archivo" float></ons-input></div>
+            </ons-list-item>
+           </ons-list>
+ 
+  </body>
+</html>
+

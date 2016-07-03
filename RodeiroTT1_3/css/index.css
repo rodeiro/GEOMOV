@@ -1,0 +1,18 @@
+
+      a {
+        color:black;
+        display:block;
+        margin:10px 0px;
+      }
+
+      h1{
+        color:white;
+        padding: 5%;
+        margin: 10%;
+      }
+
+      .vacio{
+        height: 200px;
+        width: 100%;
+        background: #666;
+      }

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+    <title>Geolocation Everywhere</title>
+     <script src="lib/onsen/js/onsenui.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+  </head>
+  <body onload="onload();">
+    <ons-tabbar>
+      <ons-tab page="home.html" >
+        <ons-icon icon="ion-home"></ons-icon>
+        <span style="font-size: 14px">GeoHome</span>
+      </ons-tab>
+      <ons-tab page="record.html" active="true">
+        <ons-icon icon="ion-pie-graph"></ons-icon>
+        <span style="font-size: 14px">Records</span>
+      </ons-tab>
+      <ons-tab page="settings.html" >
+        <ons-icon icon="ion-gear-a"></ons-icon>
+        <span style="font-size: 14px">Settings</span>
+      </ons-tab>
+    </ons-tabbar>
+
+
+
+
+
+    <ons-template id="home.html">
+    <ons-page id="homePage">
+      
+      <ons-toolbar modifier="material">
+        <div class="center">GeoHome</div>
+      </ons-toolbar>
+
+
+      <ons-list id="botonYContador" modifier="material">
+       <ons-list-item modifier="material">
+            <ons-list id="listacontadores" modifier="material">
+                  
+            </ons-list>
+        </ons-list-item> <BR><BR><BR><BR>
+        <ons-list-item modifier="material">
+             <div class="list__item__center">
+                <ons-button  id="botonGeo" modifier="material">Geolocalizar</ons-button>
+            </div>
+        </ons-list-item>
+    </ons-list>
+    </ons-page>
+    </ons-template>
+
+
+
+
+    <ons-template id="record.html">
+    <ons-page id="recordPage">
+      
+      <ons-toolbar modifier="material">
+        <div class="center">Records</div>
+      </ons-toolbar>
+
+      <ons-list id="historialYFiltro" modifier="material">
+          <ons-list-item>
+              <div class="list__item__left"><ons-input id="filtroPorUsuario" placeholder="Filtro por nombre" float></ons-input></div>
+              <div class="list__item__right"><ons-button  id="botonFiltrar" >Filtrar</ons-button></div>
+          </ons-list-item>
+          <ons-list-item modifier="material">
+              <ons-list id="historial" modifier="material">
+              </ons-list>
+          </ons-list-item>
+
+        <ons-list-item modifier="material">
+          <div class="list__item__left">
+            <ons-button  id="botonReset" modifier="material">Borrar todo</ons-button>
+          </div>
+       </ons-list-item>
+       </ons-list>
+
+
+      <ons-modal var="modal" id= "modal">
+            <div id="enumModal"></div><br><br>
+       <!-- <ons-button id="cerrarModal" modifier="material">Cerrar</ons-button>-->
+        <ons-icon id="cerrarModal" icon="ion-close-circled" spin="false"></ons-icon>
+      </ons-modal>
+
+
+    </ons-page>
+    </ons-template>
+
+
+
+
+
+
+    <ons-template id="settings.html">
+    <ons-page id="settingsPage">
+      
+      <ons-toolbar modifier="material">
+        <div class="center">Settings</div>
+      </ons-toolbar>
+
+    
+      <ons-list modifier="material">
+          <ons-list-item modifier="material">
+              <ons-input id="username" placeholder="Nombre de usuario" float></ons-input>
+          </ons-list-item>
+
+          <ons-list-item modifier="material">
+              <div class="list__item__center">Interior</div>
+              <div class="list__item__right">
+                <ons-switch id= "interiorSelector" modifier="material"></ons-switch>
+              </div>
+          </ons-list-item>
+
+          <ons-list-item modifier="material">
+              <ons-input id="timeOutInput" placeholder="Time out" float></ons-input>
+          </ons-list-item>
+
+          <ons-list-item modifier="material">
+              <ons-input id="maxAgeInput" placeholder="Edad máxima" float></ons-input>
+          </ons-list-item>
+
+          <ons-list-item modifier="material">
+              <div class="list__item__center">Alta precisión</div>
+              <div class="list__item__right">
+                <ons-switch id= "precisionSelector" modifier="material"></ons-switch>
+              </div>
+          </ons-list-item>
+        </ons-list>
+
+      <p style="text-align: center">
+        <ons-button id="botonGuardar" modifier="material">Guardar</ons-button>
+      </p>
+    
+    </ons-page>
+    </ons-template> 
+
+
+  </body>
+</html>
+

@@ -1,0 +1,35 @@
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="es.mastergeoinformatica.mov.rodeiro.rutas" version="1.0.0">
+  <name>VarelaTT3</name>
+  <description>MOVTT3: se almacenarán las rutas que registre el
+usuario en una carpeta no privada del dispositivo, que el usuario podrá eliminar si lo desea.</description>
+  <author href="http://phonegap.com" email="tirso.varela.rodeiro@udc.es">Tirso V. Rodeiro</author>
+  <content src="index.html"/>
+  <preference name="permissions" value="none"/>
+  <preference name="orientation" value="default"/>
+  <preference name="target-device" value="universal"/>
+  <preference name="fullscreen" value="true"/>
+  <preference name="webviewbounce" value="true"/>
+  <preference name="prerendered-icon" value="true"/>
+  <preference name="stay-in-webview" value="false"/>
+  <preference name="ios-statusbarstyle" value="black-opaque"/>
+  <preference name="detect-data-types" value="true"/>
+  <preference name="exit-on-suspend" value="false"/>
+  <preference name="show-splash-screen-spinner" value="true"/>
+  <preference name="auto-hide-splash-screen" value="true"/>
+  <preference name="disable-cursor" value="false"/>
+  <preference name="android-minSdkVersion" value="14"/>
+  <preference name="android-installLocation" value="auto"/>
+  <icon src="icon.png"/>
+  <gap:plugin name="org.apache.cordova.geolocation"/>
+  <gap:plugin name="org.apache.cordova.file"/>
+  <gap:plugin name="org.apache.cordova.network-information"/>
+  <plugin name="cordova-plugin-whitelist" version="1"/>
+  <allow-intent href="http://nominatim.openstreetmap.org/*"/> <!-- Geocoding -->
+  <allow-intent href="https://api.tiles.mapbox.com/*"/> <!-- Turf -->
+  <allow-intent href="http://*.ssl.fastly.net"/> <!-- Map tiles -->
+  <allow-intent href="http://*.tile.openstreetmap.org"/> <!-- Map2 tiles-->
+  
+
+  <platform name="android">
+  </platform>
+</widget>

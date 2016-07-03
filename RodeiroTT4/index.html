@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+    <title>GeoLeft</title>
+     <script src="lib/onsen/js/onsenui.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+
+    <script src="lib/leaflet/leaflet.js"></script>
+    <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+    <!--<script src="lib/turf/turf.min.js"></script>-->
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+
+  </head>
+  <body onload="onload();">
+    <ons-tabbar>
+      <ons-tab page="home.html" active="true">
+        <ons-icon icon="ion-home"></ons-icon>
+        <span style="font-size: 14px">GeoHome</span>
+      </ons-tab>
+      <ons-tab page="record.html">
+        <ons-icon icon="ion-pie-graph"></ons-icon>
+        <span style="font-size: 14px">Records</span>
+      </ons-tab>
+    </ons-tabbar>
+
+
+
+
+
+    <ons-template id="home.html">
+    <ons-page id="homePage">
+      
+      <ons-toolbar modifier="material">
+        <div class="center">GeoLeft</div>
+      </ons-toolbar>
+
+  
+    <ons-list modifier="material">
+        <ons-list-item>
+
+              <div class="list__item__left">
+                <ons-button id="geoButton">Parked</ons-button>
+              </div>
+
+              <div class="list__item__right">
+                <ons-button  id="mapButton">Show map</ons-button>
+              </div>
+        </ons-list-item>
+    </ons-list>
+    <div id="distance"></div>
+    <div id="map"></div>
+    
+    </ons-page>
+    </ons-template>
+
+
+
+
+    <ons-template id="record.html">
+    <ons-page id="recordPage">
+      
+      <ons-toolbar modifier="material">
+        <div class="center">Records</div>
+      </ons-toolbar>
+
+      <ons-list id="recordsAndFilter" modifier="material">
+          <ons-list-item>
+              <div class="list__item__left"><ons-input id="distanceFilter" placeholder="Insert distance" float></ons-input></div>
+              <div class="list__item__right"><ons-button  id="filterButton" >Find</ons-button></div>
+          </ons-list-item>
+          <ons-list-item modifier="material">
+              <ons-list id="pastRecords" modifier="material">
+              </ons-list>
+          </ons-list-item>
+
+        <ons-list-item modifier="material">
+          <div class="list__item__left">
+            <ons-button  id="botonReset" modifier="material">RESET</ons-button>
+          </div>
+       </ons-list-item>
+       </ons-list>
+
+
+      <ons-modal var="modal" id= "modal">
+          <div id="enumModal"></div><br><br>
+        <ons-icon id="closeModal" icon="ion-close-circled" spin="false"></ons-icon>
+      </ons-modal>
+
+
+    </ons-page>
+    </ons-template>
+
+
+
+
+
+
+
+  </body>
+</html>
+

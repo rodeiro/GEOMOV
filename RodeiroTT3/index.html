@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+    <title>Rutas</title>
+     <script src="lib/onsen/js/onsenui.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    
+    <script src="lib/leaflet/leaflet.js"></script>
+    <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+    <!--<script src="lib/turf/turf.min.js" charset="utf-8"></script>-->
+    <script src="lib/jquery/jquery-1.12.3.min.js"></script>
+
+  </head>
+  <body onload="onload();">
+    <ons-tabbar>
+      <ons-tab page="nuevas.html" active="true">
+        <ons-icon icon="ion-location"></ons-icon>
+        <span style="font-size: 14px">Nueva</span>
+      </ons-tab>
+      <ons-tab page="antiguas.html" >
+        <ons-icon icon="ion-map"></ons-icon>
+        <span style="font-size: 14px">Antiguas</span>
+      </ons-tab>
+    </ons-tabbar>
+
+
+
+
+    <ons-template id="nuevas.html">
+    <ons-page id="nuevas">
+      
+      <ons-toolbar modifier="material">
+        <div class="center">Nueva ruta</div>
+      </ons-toolbar>
+
+  
+    <ons-list modifier="material">
+        <ons-list-item>
+
+              <div class="list__item__left">
+                <ons-button id="botonRuta">Empezar ruta</ons-button>
+              </div>
+
+              <div class="list__item__right">
+                <ons-button  id="botonMapa">Ver mapa</ons-button>
+              </div>
+        </ons-list-item>
+    </ons-list>
+
+    <div id="map"></div>
+    
+    </ons-page>
+    </ons-template>
+
+
+
+
+    <ons-template id="antiguas.html">
+    <ons-page id="antiguas">
+      
+      <ons-toolbar modifier="material">
+        <div class="center">Historial</div>
+      </ons-toolbar>
+
+      <ons-list modifier="material">
+          <ons-list-item>
+
+                <div class="list__item__left">
+                  <ons-input id="idMapa" placeholder="Número de ruta" float></ons-input>
+                </div>
+
+                <div class="list__item__right">
+                  <ons-button  id="botonHistorial">Ver ruta</ons-button>
+                </div>
+          </ons-list-item>
+      </ons-list>
+
+      <div id="map2"></div>
+
+
+
+    </ons-page>
+    </ons-template>
+
+  </body>
+</html>
+
